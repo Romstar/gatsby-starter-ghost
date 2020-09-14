@@ -13,7 +13,6 @@ import { MetaData } from "../components/common/meta";
  *
  */
 const Post = ({ data, location }) => {
-    console.log("data:", data);
     const post = data.ghostPost;
 
     return (
