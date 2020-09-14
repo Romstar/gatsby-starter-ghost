@@ -49,7 +49,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                         <div className="container">
                             <div className="site-mast">
                                 <div className="site-mast-left">
-                                    <Link to="/blog">
+                                    <Link to="/">
                                         {site.logo ? (
                                             <img
                                                 className="site-logo"
@@ -131,7 +131,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                 <div className="site-nav-right">
                                     <Link
                                         className="site-nav-button"
-                                        to="/blog/about"
+                                        to="/about"
                                     >
                                         About
                                     </Link>
@@ -151,8 +151,8 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                     <footer className="site-foot">
                         <div className="site-foot-nav container">
                             <div className="site-foot-nav-left">
-                                <Link to="/blog">{site.title}</Link> © 2019
-                                &mdash; Published with{" "}
+                                <Link to="/">{site.title}</Link> © 2019 &mdash;
+                                Published with{" "}
                                 <a
                                     className="site-foot-nav-item"
                                     href="https://ghost.org"

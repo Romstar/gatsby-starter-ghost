@@ -15,14 +15,6 @@ import { Link } from "gatsby";
 const Navigation = ({ data, navClass }) => (
     <>
         {data.map((navItem, i) => {
-            console.log("nav item:", navItem);
-            if (
-                navItem &&
-                navItem.label &&
-                navItem.label.toLowerCase() === "home"
-            ) {
-                navItem.url = "/blog";
-            }
             if (navItem.url.match(/^\s?http(s?)/gi)) {
                 return (
                     <a
