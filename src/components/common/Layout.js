@@ -19,6 +19,16 @@ import "../../styles/app.css";
  *
  */
 const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
+    const addPrefixToSocialMediaIcons =
+        process.env.NODE_ENV === "production" ? true : false;
+    console.log("addPrefixToSocialMediaIcons:", addPrefixToSocialMediaIcons);
+
+    console.log(
+        "twitter result:",
+        addPrefixToSocialMediaIcons
+            ? "/blog/images/icons/twitter.svg"
+            : "/images/icons/twitter.svg"
+    );
     const site = data.allGhostSettings.edges[0].node;
     const twitterUrl = site.twitter
         ? `https://twitter.com/${site.twitter.replace(/^@/, ``)}`
@@ -77,7 +87,11 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                         >
                                             <img
                                                 className="site-nav-icon"
-                                                src="/images/icons/twitter.svg"
+                                                src={
+                                                    addPrefixToSocialMediaIcons
+                                                        ? "/blog/images/icons/twitter.svg"
+                                                        : "/images/icons/twitter.svg"
+                                                }
                                                 alt="Twitter"
                                             />
                                         </a>
@@ -91,7 +105,11 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                         >
                                             <img
                                                 className="site-nav-icon"
-                                                src="/images/icons/facebook.svg"
+                                                src={
+                                                    addPrefixToSocialMediaIcons
+                                                        ? "/blog/images/icons/facebook.svg"
+                                                        : "/images/icons/facebook.svg"
+                                                }
                                                 alt="Facebook"
                                             />
                                         </a>
@@ -104,7 +122,11 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                     >
                                         <img
                                             className="site-nav-icon"
-                                            src="/images/icons/rss.svg"
+                                            src={
+                                                addPrefixToSocialMediaIcons
+                                                    ? "/blog/images/icons/rss.svg"
+                                                    : "/images/icons/rss.svg"
+                                            }
                                             alt="RSS Feed"
                                         />
                                     </a>

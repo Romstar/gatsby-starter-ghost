@@ -24,7 +24,7 @@
   ],
   "main": "n/a",
   "scripts": {
-    "serve": "gatsby build --prefix-paths && NODE_ENV=production gatsby serve --prefix-paths",
+    "serve": "rm -rf .cache public && gatsby build --prefix-paths && NODE_ENV=production gatsby serve --prefix-paths",
     "build": "gatsby build --prefix-paths",
     "dev": "gatsby develop",
     "lint": "eslint . --ext .js --cache",
