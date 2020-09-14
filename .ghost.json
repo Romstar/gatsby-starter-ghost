@@ -1,10 +1,10 @@
 {
   "development": {
-    "apiUrl": "https://gatsby.ghost.io",
-    "contentApiKey": "9cc5c67c358edfdd81455149d0"
+    "apiUrl": "https://go-ideal-software-ghost-blog.herokuapp.com",
+    "contentApiKey": "25c9f02beae44c3b33fbc72579"
   },
   "production": {
-    "apiUrl": "https://gatsby.ghost.io",
-    "contentApiKey": "9cc5c67c358edfdd81455149d0"
+    "apiUrl": "https://go-ideal-software-ghost-blog.herokuapp.com",
+    "contentApiKey": "25c9f02beae44c3b33fbc72579"
   }
 }
